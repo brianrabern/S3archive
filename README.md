@@ -45,7 +45,7 @@ Note: Files are given unique names base on the current timestamp and the file's 
 5. Run the script using `python main.py`
 
 6. Follow the prompts to select the directory and file types to upload
-
+   - An input of 'photoslibrary' will find and scan the Photos Library on MacOS. (Might require manual input of the correct path)
    - Valid file types: `photos`, `videos`, `documents`, `misc`
 
 ## License
