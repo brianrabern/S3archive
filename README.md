@@ -56,8 +56,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Thanks to boto3, and thanks to python, and thanks to the internet, and thanks to the computer, and thanks to the electricity for existing, and thanks to Liebniz for binary numbers, and thanks to the universe for existing.
 
-Oh, and thanks to the `README.md` for existing. And thanks to the LICENSE for existing. And thanks to the `config.py` for existing. And thanks to the `requirements.txt` for existing. And thanks to the `venv` for existing. And thanks to the `.gitignore` for existing, and protecting my access keys. And thanks to the `main.py`, and all the helper functions it appeals to for existing -- without which this script would not run.
+Oh, and thanks to this `README.md` for existing. And thanks to the `config.py` for existing. And thanks to the `requirements.txt` for existing. And thanks to the `venv` for existing. And thanks to the `.gitignore` for existing, and protecting my access keys. And thanks to the `main.py`, and all the helper functions it appeals to for existing -- without which this script would not run.
 
-And thanks to the compiler for compiling the code. And thanks to the operating system for running the code. And thanks to Alan Turing, and the logicians who came before him (Frege, Aritotle, etc.), and the mathematicians who came before them, and the philosophers who came before them,  and the primordial soup that came before them, and so on.
+And thanks to the interpreter for interpreting the code.
+And thanks to the compiler for compiling the code. And thanks to the virtual machine for processing the bytecode. And thanks to the underlying operating system. And thanks to Alan Turing, and the logicians who came before him (Frege, Aritotle, etc.), and the mathematicians who came before them, and the philosophers who came before them,  and the primordial soup that came before them, and so on.
 
 And thanks to the meta-universe for existing, and thanks to the meta-meta-universe for existing, and thanks to the meta-meta-meta-universe for existing, and thanks to the meta-meta-meta-meta-universe for existing, and thanks to the meta-meta-meta-meta-meta-universe for existing, and thanks to the meta-meta-meta-meta-meta-meta-universe for existing, and thanks to the AI for existing...
