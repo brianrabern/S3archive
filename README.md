@@ -25,7 +25,7 @@ Note: Files are given unique names base on the current timestamp and the file's 
 ## Installation
 
 1. Clone the repository
-2. Create a virtual environment using `python -m venv venv`
+2. Create a virtual environment using `python -m venv venv`, and activate it `source venv/bin/activate`.
 3. Install the required packages using `pip install -r requirements.txt`
 4. Create a `config.py` file in the root directory and add the following:
 

@@ -1,5 +1,5 @@
 import boto3
-from ..config import S3
+from config import S3
 
 # set up s3 client
 aws_access_key_id = S3['keys']['S3AccessKey']
