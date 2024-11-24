@@ -4,7 +4,7 @@ def handle_photos_library(directory):
     """
     Special case to process Photos Library.photoslibrary package.
 	/Users/username/Pictures/Photos Library.photoslibrary
-    /Users/brianrabern/Pictures/Photos
+    /Users/brianrabern/Pictures/Photos Library.photoslibrary
     """
     print("Special case detected: Scanning Photos Library package.")
 
