@@ -4,6 +4,7 @@ from datetime import datetime
 import time
 import mimetypes
 from helpers.normalize import normalize_file_name
+from helpers.library import handle_photos_library
 
 # file types categorization
 file_categories = {
@@ -155,6 +156,11 @@ if __name__ == '__main__':
 	if not directory_to_scan:
 		print("Using default directory.")
 		directory_to_scan = '/Users/brianrabern/Desktop/crawlMe'
+
+	directory = directory_to_scan.strip().lower()
+
+	if directory.endswith('.photoslibrary'):
+		directory_to_scan=handle_photos_library(directory)
 
 	# Prompt user for file types (allowing multiple selections, separated by commas)
 	file_types_input = input("Enter file types to upload (photos, videos, documents, misc): ")
