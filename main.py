@@ -4,6 +4,7 @@ from datetime import datetime
 import time
 import mimetypes
 from enrich_metadata import init_tracking_db, record_result
+from export_hash_index import run_export as run_hash_export
 from export_metadata_index import run_export
 from helpers.exif_tags import build_enriched_metadata
 from helpers.geocode import init_geocode_cache
@@ -292,7 +293,6 @@ def upload_files(
     enrich_photos = "photos" in file_types
     geocode_conn = init_geocode_cache("geocode_cache.db") if enrich_photos else None
     metadata_conn = init_tracking_db("metadata.db") if enrich_photos else None
-
     try:
         for category in file_types:
             if category in file_data:
@@ -428,6 +428,8 @@ if __name__ == "__main__":
         if stats["uploaded"] > 0 and "photos" in file_types:
             print("Updating viewer metadata index...")
             run_export()
+            print("Updating hash index on S3...")
+            run_hash_export()
 
         for file_type in file_types:
             print(f"Scanned {len(file_data[file_type])} {file_type} for upload")

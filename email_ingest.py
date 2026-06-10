@@ -20,7 +20,13 @@ from helpers.exif_tags import (
     year_month_from_tags,
 )
 from helpers.geocode import init_geocode_cache
-from helpers.hash_index import find_existing_key, register_upload
+from helpers.hash_index import (
+    find_existing_key,
+    is_hash_index_dirty,
+    load_s3_hash_index,
+    persist_s3_hash_index,
+    register_upload,
+)
 from helpers.normalize import normalize_file_name
 from helpers.object_hash import hash_local_file
 from helpers.s3 import bucket_name, s3_client
@@ -153,6 +159,8 @@ def process_messages():
     service = get_gmail_service()
     geocode_conn = init_geocode_cache("geocode_cache.db")
     metadata_conn = init_tracking_db("metadata.db")
+    print("Loading hash index from S3...")
+    load_s3_hash_index(force=True)
 
     results = (
         service.users()
@@ -246,6 +254,10 @@ def process_messages():
     geocode_conn.close()
     metadata_conn.close()
     print(f"\nDone. Uploaded {uploaded}, skipped {skipped} duplicate(s).")
+
+    if is_hash_index_dirty():
+        print("Updating hash index on S3...")
+        persist_s3_hash_index()
 
     if uploaded > 0:
         print("Updating viewer metadata index...")
