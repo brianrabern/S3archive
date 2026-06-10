@@ -164,3 +164,11 @@ cython_debug/
 
 config.py
 upload_log.json
+dedupe.db
+videos_dedupe.db
+metadata.db
+geocode_cache.db
+duplicates.json
+duplicates.csv
+video_duplicates.json
+video_duplicates.csv
